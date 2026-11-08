@@ -26,7 +26,7 @@ concurrency:
 jobs:
   build-common:
     name: Build - Common code
-    runs-on: ubuntu-latest
+    runs-on: xenoci-2vcpu-ubuntu-2404
     timeout-minutes: 90
 
     steps:
@@ -57,7 +57,7 @@ jobs:
 
   build-k9:
     name: Build - K9 application
-    runs-on: ubuntu-latest
+    runs-on: xenoci-2vcpu-ubuntu-2404
     timeout-minutes: 90
     needs: [build-common]
     steps:
@@ -74,7 +74,7 @@ jobs:
 
   check-badging-k9:
     name: Check - K9 badging
-    runs-on: ubuntu-latest
+    runs-on: xenoci-2vcpu-ubuntu-2404
     timeout-minutes: 90
     needs: [ build-common ]
     steps:
@@ -95,7 +95,7 @@ jobs:
 
   build-thunderbird:
     name: Build - Thunderbird application
-    runs-on: ubuntu-latest
+    runs-on: xenoci-2vcpu-ubuntu-2404
     timeout-minutes: 90
     needs: [build-common]
     steps:
@@ -112,7 +112,7 @@ jobs:
 
   check-badging-thunderbird:
     name: Check - Thunderbird badging
-    runs-on: ubuntu-latest
+    runs-on: xenoci-2vcpu-ubuntu-2404
     timeout-minutes: 90
     needs: [ build-common ]
     steps:
@@ -137,7 +137,7 @@ jobs:
 
   build-ui-catalog:
     name: Build - UI-catalog application
-    runs-on: ubuntu-latest
+    runs-on: xenoci-2vcpu-ubuntu-2404
     timeout-minutes: 90
     needs: [build-common]
     steps:
@@ -154,7 +154,7 @@ jobs:
 
   quality-unit-test:
     name: Quality - Unit tests
-    runs-on: ubuntu-latest
+    runs-on: xenoci-2vcpu-ubuntu-2404
     timeout-minutes: 90
     needs: [build-common]
     steps:
@@ -171,7 +171,7 @@ jobs:
 
   quality-lint:
     name: Quality - Lint
-    runs-on: ubuntu-latest
+    runs-on: xenoci-2vcpu-ubuntu-2404
     timeout-minutes: 90
     needs: [build-common]
     steps:

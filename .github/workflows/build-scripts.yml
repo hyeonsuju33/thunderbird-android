@@ -20,7 +20,7 @@ permissions:
 jobs:
   build-scripts:
     name: Build scripts
-    runs-on: ubuntu-latest
+    runs-on: xenoci-2vcpu-ubuntu-2404
     timeout-minutes: 20
     steps:
       - name: Checkout the repo
