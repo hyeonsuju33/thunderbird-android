@@ -3,7 +3,7 @@ name: Validate - Milestones
 
 on:
   pull_request:
-    branches: [main, beta, release]
+    branches: [main, beta, release, 'pr-train', 'xeno-base']
   workflow_dispatch:
 
 permissions:
